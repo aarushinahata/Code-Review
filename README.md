@@ -1,95 +1,92 @@
-# Code Review App
+# AI Code Review Assistant
 
-## Overview
-A full-stack application for AI-powered code review using React (Vite) for the frontend and Node.js/Express for the backend, integrated with Google Generative AI.
+A full-stack web application that provides intelligent code review suggestions using multiple AI models (Google Gemini and OpenAI GPT). Built with React, Node.js, and MongoDB.
 
----
+## 🚀 Features
 
-## Setup Instructions
+- **Multi-AI Model Support**: Choose between Gemini 2.0 Flash, Gemini Pro, and OpenAI GPT-3.5
+- **Real-time Code Review**: Get instant AI-powered feedback on your code
+- **User Authentication**: Secure login/register system with JWT tokens and bcrypt password hashing
+- **Review History**: Save and manage your code review history with MongoDB persistence
+- **Dark/Light Theme**: Toggle between themes for better user experience
+- **Syntax Highlighting**: Code editor with Prism.js syntax highlighting and markdown rendering
+- **Responsive Design**: Works seamlessly across different devices
+- **Real-time Error Handling**: Comprehensive error management and user feedback
+- **Modern UI/UX**: Intuitive interface with smooth interactions
 
-### Prerequisites
-- Node.js (v18+ recommended)
-- npm
+## 🛠️ Tech Stack
 
-### Backend Setup
-1. Navigate to the `BackEnd` directory:
-   ```sh
+**Frontend:**
+- React 19 with Vite
+- Axios for API communication
+- React Simple Code Editor with Prism.js syntax highlighting
+- React Markdown for review display
+- Local storage for offline history
+
+**Backend:**
+- Node.js with Express.js
+- MongoDB with Mongoose ODM
+- JWT for authentication
+- Google Generative AI & OpenAI APIs
+- bcryptjs for password hashing
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd Code-Review
+   ```
+
+2. **Backend Setup**
+   ```bash
    cd BackEnd
-   ```
-2. Install dependencies:
-   ```sh
    npm install
    ```
-3. Create a `.env` file and add your Google Gemini API key:
+   Create `.env` file:
    ```env
-   GOOGLE_GEMINI_KEY=your_api_key_here
+   GOOGLE_GEMINI_KEY=your_gemini_api_key
+   OPENAI_API_KEY=your_openai_api_key
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
    ```
-4. Start the backend server:
-   ```sh
-   npm start
-   ```
-   The backend runs on `http://localhost:3000` by default.
 
-### Frontend Setup
-1. Navigate to the `Frontend` directory:
-   ```sh
+3. **Frontend Setup**
+   ```bash
    cd Frontend
-   ```
-2. Install dependencies:
-   ```sh
    npm install
    ```
-3. Start the frontend dev server:
-   ```sh
-   npm run dev
+
+4. **Run the Application**
+   ```bash
+   # Terminal 1 - Backend
+   cd BackEnd && npm start
+   
+   # Terminal 2 - Frontend
+   cd Frontend && npm run dev
    ```
-   The frontend runs on `http://localhost:5173` by default.
+
+## 🔧 API Endpoints
+
+- `POST /ai/get-review` - Get AI code review
+- `POST /auth/register` - User registration
+- `POST /auth/login` - User authentication
+- `GET /review/history` - Get user's review history
+- `POST /review/save` - Save review to database
+
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
 ---
 
-## Usage
-- Enter your code in the editor and click **Review** to get an AI-generated code review.
-- Error messages will be shown if the backend or AI service is unavailable.
-
----
-
-## API Endpoints
-### POST `/ai/get-review`
-- **Request Body:**
-  ```json
-  { "code": "<your code here>" }
-  ```
-- **Response:**
-  - `200 OK`: AI-generated review as plain text/markdown.
-  - `400 Bad Request`: If `code` is missing.
-  - `500 Internal Server Error`: If an unexpected error occurs.
-  - `503 Service Unavailable`: If the AI service is overloaded.
-
----
-
-## Security
-- All user input is validated for presence on the backend.
-- **Important:** For production, further sanitize and validate all input to prevent injection attacks.
-- Use HTTPS in production to secure data in transit.
-- Never commit your `.env` file or API keys to version control.
-
----
-
-## Feature Ideas
-- **History:** Let users see a history of their code reviews.
-- **Export:** Allow users to export reviews as PDF or Markdown.
-- **Authentication:** Add user accounts for personalized experiences.
-- **Multiple Models:** Let users choose between different AI models or fallback if one is overloaded.
-
----
-
-## Contributing
-1. Fork the repo and create your branch: `git checkout -b feature/your-feature`
-2. Commit your changes: `git commit -am 'Add new feature'`
-3. Push to the branch: `git push origin feature/your-feature`
-4. Open a pull request
-
----
-
-## License
-MIT
+**Built with ❤️ using React, Node.js, and AI APIs**
