@@ -1,4 +1,4 @@
-# AI Code Review Assistant
+# Code Review
 
 A full-stack web application that provides intelligent code review suggestions using multiple AI models (Google Gemini and OpenAI GPT). Built with React, Node.js, and MongoDB.
 
@@ -74,6 +74,16 @@ A full-stack web application that provides intelligent code review suggestions u
 - `GET /review/history` - Get user's review history
 - `POST /review/save` - Save review to database
 
+## 📸 Screenshots
+
+- 🔐 Login Page
+![Login](./screenshots/login.png)
+
+- 🧠 Review Output
+![Review](./screenshots/review.png)
+
+- 📜 Review History
+![History Screenshot](./screenshots/history.png)
 
 ## 🤝 Contributing
 
