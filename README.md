@@ -89,4 +89,4 @@ This project is licensed under the MIT License.
 
 ---
 
-**Built with ❤️ using React, Node.js, and AI APIs**
+💡 Note: This app is a personal learning project to explore full-stack development and GenAI integration.
