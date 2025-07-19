@@ -77,13 +77,13 @@ A full-stack web application that provides intelligent code review suggestions u
 ## 📸 Screenshots
 
 - 🔐 Login Page
-![Login](./Screenshot/login.png)
+![Login](./Screenshot/Login.png)
 
 - 🧠 Review Output
-![Review](./Screenshot/review.png)
+![Review](./Screenshot/Review.png)
 
 - 📜 Review History
-![History Screenshot](./Screenshot/history.png)
+![History Screenshot](./Screenshot/History.png)
 
 ## 🤝 Contributing
 
